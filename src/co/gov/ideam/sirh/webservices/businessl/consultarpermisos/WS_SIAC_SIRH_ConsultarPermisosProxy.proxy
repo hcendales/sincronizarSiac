@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="WS_SIAC_SIRH_ConsultarPermisos_Service.xml"/>
+      <url path="WS_SIAC_SIRH_ConsultarPermisos.wsdl"/>
+      <url path="OeConsultarPermisos.java"/>
+      <url path="OsConsultarPermisos.java"/>
+      <url path="ConsultarPermisos.java"/>
+      <url path="WS_SIAC_SIRH_ConsultarPermisos_Service.java"/>
+      <url path="ConsultarPermisoSirhPortClient.java"/>
+      <url path="ObjectFactory.java"/>
+      <url path="WS_SIAC_SIRH_ConsultarPermisos.java"/>
+      <url path="ConsultarPermisosV.java"/>
+      <url path="package-info.java"/>
+      <url path="ConsultarPermisosResponse.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="WS_SIAC_SIRH_ConsultarPermisos_Service.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_ENABLED"/>
+      <list n="PROXY_CLIENTS">
+         <url path="ConsultarPermisoSirhPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="http" host="181.225.72.35" port="8230" path="/Ideam-Ejb/WS_SIAC_SIRH_ConsultarPermisos/WS_SIAC_SIRH_ConsultarPermisos" query="WSDL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="ConsultarPermisoSirhPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="co.gov.ideam.sirh.webservices.businessl.consultarpermisos.WS_SIAC_SIRH_ConsultarPermisos"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="ConsultarPermisoSirhPort"/>
+            <hash n="OPERATIONS">
+               <hash n="consultarPermisos">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_CLIENT_POLICY">
+                  <value n="addressing"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="172.16.1.98" port="8230" path="/Ideam-Ejb/WS_SIAC_SIRH_ConsultarPermisos/WS_SIAC_SIRH_ConsultarPermisos"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="WS_SIAC_SIRH_ConsultarPermisos"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../../SincronizarSIAC.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST"/>
+      <url n="PROXY_WSDL_URL" path="WS_SIAC_SIRH_ConsultarPermisos.wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/}WS_SIAC_SIRH_ConsultarPermisos"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/}WS_SIAC_SIRH_ConsultarPermisosSoapBinding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BOUND_OPERATION" v="co.gov.ideam.sirh.webservices.businessl.consultarpermisos.OsConsultarPermisos.consultarPermisos.co.gov.ideam.sirh.webservices.businessl.consultarpermisos.OeConsultarPermisos"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="3c0ec377-0159-1000-8001-a9fec1ad9787"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="ConsultarPermisoSirhPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/}WS_SIAC_SIRH_ConsultarPermisosSoapBinding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="co.gov.ideam.sirh.webservices.businessl.consultarpermisos.OsConsultarPermisos.consultarPermisos.co.gov.ideam.sirh.webservices.businessl.consultarpermisos.OeConsultarPermisos"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="172.16.1.98" port="8230" path="/Ideam-Ejb/WS_SIAC_SIRH_ConsultarPermisos/WS_SIAC_SIRH_ConsultarPermisos"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/}WS_SIAC_SIRH_ConsultarPermisos"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="co.gov.ideam.sirh.webservices.businessl.consultarpermisos.WS_SIAC_SIRH_ConsultarPermisosImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="co.gov.ideam.sirh.webservices.businessl.consultarpermisos.WS_SIAC_SIRH_ConsultarPermisos"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../../../SincronizarSIAC.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/"/>
+         <value n="WS_URI" v="WS_SIAC_SIRH_ConsultarPermisos"/>
+         <url n="WS_WSDL_FILE" path="WS_SIAC_SIRH_ConsultarPermisos.wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+   </hash>
+</jdevws:WebServiceProxy>

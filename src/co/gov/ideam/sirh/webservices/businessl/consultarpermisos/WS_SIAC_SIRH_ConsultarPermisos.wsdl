@@ -1,0 +1,100 @@
+<wsdl:definitions
+     name="WS_SIAC_SIRH_ConsultarPermisos"
+     targetNamespace="http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/"
+     xmlns:ns1="http://schemas.xmlsoap.org/soap/http"
+     xmlns:tns="http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    >
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/"
+             elementFormDefault="unqualified" targetNamespace="http://consultarPermisos.businessl.webservices.sirh.ideam.gov.co/"
+             version="1.0">
+            <xs:element name="ConsultarPermisos" type="tns:ConsultarPermisos"/>
+            <xs:element name="ConsultarPermisosResponse" type="tns:ConsultarPermisosResponse"/>
+            <xs:complexType name="ConsultarPermisos">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="tns:oeConsultarPermisos"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="oeConsultarPermisos">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="codAutoridadAmbiental" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fechaFin" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fechaInicio" type="xs:string"/>
+                    <xs:element minOccurs="0" name="filtroConsulta" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ConsultarPermisosResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="ConsultarPermisos" type="tns:osConsultarPermisos"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="osConsultarPermisos">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="codigoError" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="listaPermisos" nillable="true"
+                         type="tns:consultarPermisosV"/>
+                    <xs:element minOccurs="0" name="mensajeError" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="consultarPermisosV">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="autoridad" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cantidadrecursootorgado" type="xs:double"/>
+                    <xs:element minOccurs="0" name="cedulacatastral" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codigotipoidentificacion" type="xs:long"/>
+                    <xs:element minOccurs="0" name="direccionpredio" type="xs:string"/>
+                    <xs:element minOccurs="0" name="estadoinfotecnica" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fechaexpedicion" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="fechavencimiento" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="id" type="xs:long"/>
+                    <xs:element minOccurs="0" name="idAutoridad" type="xs:long"/>
+                    <xs:element minOccurs="0" name="iddeptopredio" type="xs:long"/>
+                    <xs:element minOccurs="0" name="identificacionpersona" type="xs:string"/>
+                    <xs:element minOccurs="0" name="idmunicipiopredio" type="xs:long"/>
+                    <xs:element minOccurs="0" name="infotecnica" type="xs:string"/>
+                    <xs:element minOccurs="0" name="matriculainmobiliaria" type="xs:string"/>
+                    <xs:element minOccurs="0" name="nombrepredio" type="xs:string"/>
+                    <xs:element minOccurs="0" name="numexpediente" type="xs:string"/>
+                    <xs:element minOccurs="0" name="numresolucion" type="xs:string"/>
+                    <xs:element minOccurs="0" name="primerapellido" type="xs:string"/>
+                    <xs:element minOccurs="0" name="primernombre" type="xs:string"/>
+                    <xs:element minOccurs="0" name="razonsocial" type="xs:string"/>
+                    <xs:element minOccurs="0" name="tipopermiso" type="xs:string"/>
+                    <xs:element minOccurs="0" name="tipopersona" type="xs:long"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="ConsultarPermisos">
+        <wsdl:part name="parameters" element="tns:ConsultarPermisos"/>
+    </wsdl:message>
+    <wsdl:message name="ConsultarPermisosResponse">
+        <wsdl:part name="parameters" element="tns:ConsultarPermisosResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="WS_SIAC_SIRH_ConsultarPermisos">
+        <wsdl:operation name="ConsultarPermisos">
+            <wsdl:input name="ConsultarPermisos" message="tns:ConsultarPermisos"/>
+            <wsdl:output name="ConsultarPermisosResponse" message="tns:ConsultarPermisosResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="WS_SIAC_SIRH_ConsultarPermisosSoapBinding" type="tns:WS_SIAC_SIRH_ConsultarPermisos">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="ConsultarPermisos">
+            <soap:operation style="document" soapAction=""/>
+            <wsdl:input name="ConsultarPermisos">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ConsultarPermisosResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="WS_SIAC_SIRH_ConsultarPermisos">
+        <wsdl:port name="ConsultarPermisoSirhPort" binding="tns:WS_SIAC_SIRH_ConsultarPermisosSoapBinding">
+            <soap:address location="http://172.16.1.98:8230/Ideam-Ejb/WS_SIAC_SIRH_ConsultarPermisos/WS_SIAC_SIRH_ConsultarPermisos"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

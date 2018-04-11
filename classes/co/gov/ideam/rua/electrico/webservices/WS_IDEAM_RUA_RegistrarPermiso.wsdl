@@ -1,0 +1,102 @@
+<WL5G3N0:definitions
+     name="WS_IDEAM_RUA_RegistrarPermiso"
+     targetNamespace="http://webservices.electrico.rua.ideam.gov.co/"
+     xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:WL5G3N1="http://webservices.electrico.rua.ideam.gov.co/"
+    >
+    <WL5G3N0:types>
+        <xsd:schema elementFormDefault="unqualified" targetNamespace="http://webservices.electrico.rua.ideam.gov.co/"
+             version="1.0" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://webservices.electrico.rua.ideam.gov.co/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:element name="registrarPermiso" type="tns:registrarPermiso"/>
+            <xsd:element name="registrarPermisoResponse" type="tns:registrarPermisoResponse"/>
+            <xsd:complexType name="registrarPermiso">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="objetoEntrada" type="tns:oeRegistrarPermiso"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="oeRegistrarPermiso">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="actividadCIIU" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="cedulaCatastral" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="celular" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="codAutoridadAmbiental" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="codigoTipoIdentificacion" type="xs:long"/>
+                    <xsd:element minOccurs="0" name="codigoTipoIdentificacionRepLegal" type="xs:long"/>
+                    <xsd:element minOccurs="0" name="direccionCorreoElectronico" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="direccionCorrespondencia" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="direccionPredio" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="fechaExpedicion" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="fechaVencimiento" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="idDeptoCorrespondencia" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="idDeptoPredio" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="idMunicipioCorrespondencia" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="idMunicipioPredio" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="identificacionPersona" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="identificacionRepLegal" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="matriculaInmobiliaria" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="nombrePredio" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="numExpediente" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="numResolucion" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="primerApellido" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="primerApellidoRepLegal" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="primerNombre" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="primerNombreRepLegal" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="razonSocial" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="segundoApellido" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="segundoApellidoRepLegal" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="segundoNombre" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="segundoNombreRepLegal" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="telefonoFijo" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="tipoPermiso" type="xs:long"/>
+                    <xsd:element minOccurs="0" name="tipoPersona" type="xs:long"/>
+                    <xsd:element minOccurs="0" name="unidad" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="volumenArea" type="xs:int"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="registrarPermisoResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="tns:osRegistrarPermiso"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="osRegistrarPermiso">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codigoError" type="xs:int"/>
+                    <xsd:element minOccurs="0" name="mensajeError" type="xs:string"/>
+                    <xsd:element minOccurs="0" name="numeroAutorizacion" type="xs:int"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </WL5G3N0:types>
+    <WL5G3N0:message name="registrarPermiso">
+        <WL5G3N0:part name="parameters" element="WL5G3N1:registrarPermiso"/>
+    </WL5G3N0:message>
+    <WL5G3N0:message name="registrarPermisoResponse">
+        <WL5G3N0:part name="parameters" element="WL5G3N1:registrarPermisoResponse"/>
+    </WL5G3N0:message>
+    <WL5G3N0:portType name="WS_IDEAM_RUA_RegistrarPermiso">
+        <WL5G3N0:operation name="registrarPermiso">
+            <WL5G3N0:input name="registrarPermiso" message="WL5G3N1:registrarPermiso"/>
+            <WL5G3N0:output name="registrarPermisoResponse" message="WL5G3N1:registrarPermisoResponse"/>
+        </WL5G3N0:operation>
+    </WL5G3N0:portType>
+    <WL5G3N0:binding name="WS_IDEAM_RUA_RegistrarPermisoSoapBinding" type="WL5G3N1:WS_IDEAM_RUA_RegistrarPermiso">
+        <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <WL5G3N0:operation name="registrarPermiso">
+            <WL5G3N2:operation style="document"/>
+            <WL5G3N0:input name="registrarPermiso">
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:input>
+            <WL5G3N0:output name="registrarPermisoResponse">
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:output>
+        </WL5G3N0:operation>
+    </WL5G3N0:binding>
+    <WL5G3N0:service name="WS_IDEAM_RUA_RegistrarPermiso">
+        <WL5G3N0:port name="WS_IDEAM_RUA_RegistrarPermisoPort" binding="WL5G3N1:WS_IDEAM_RUA_RegistrarPermisoSoapBinding">
+            <WL5G3N2:address location="http://129.144.8.81:80/WS_RUA_RegistrarPermiso/proxy/RegistrarPermisoProxy"/>
+        </WL5G3N0:port>
+    </WL5G3N0:service>
+</WL5G3N0:definitions>

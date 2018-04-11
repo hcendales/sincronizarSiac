@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="WS_SIAC_SIRH_RegistrarPermiso_Service.xml"/>
+      <url path="WS_SIAC_SIRH_RegistrarPermiso.wsdl"/>
+      <url path="OsRegistrarPermiso.java"/>
+      <url path="package-info.java"/>
+      <url path="OeRegistrarPermiso.java"/>
+      <url path="ObjectFactory.java"/>
+      <url path="PredioWS.java"/>
+      <url path="RepresentanteWS.java"/>
+      <url path="PermisoWS.java"/>
+      <url path="RegistrarPermiso.java"/>
+      <url path="WS_SIAC_SIRH_RegistrarPermiso_Service.java"/>
+      <url path="UsuarioAguaWS.java"/>
+      <url path="WS_SIAC_SIRH_RegistrarPermiso.java"/>
+      <url path="RegistrarPermisoSirhPortClient.java"/>
+      <url path="RegistrarPermisoResponse.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="WS_SIAC_SIRH_RegistrarPermiso_Service.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_ENABLED"/>
+      <list n="PROXY_CLIENTS">
+         <url path="RegistrarPermisoSirhPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="http" host="129.144.6.77" port="8001" path="/WS_SIRH_RegistrarPermiso/proxy/RegistrarPermisoProxy" query="wsdl"/>
+      <hash n="PROXY_PORTS">
+         <hash n="RegistrarPermisoSirhPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="co.gov.ideam.sirh.webservices.businessl.registrarpermiso.WS_SIAC_SIRH_RegistrarPermiso"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="RegistrarPermisoSirhPort"/>
+            <hash n="OPERATIONS">
+               <hash n="registrarPermiso">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_CLIENT_POLICY">
+                  <value n="addressing"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="129.144.8.81" port="80" path="/WS_SIRH_RegistrarPermiso/proxy/RegistrarPermisoProxy"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="WS_SIAC_SIRH_RegistrarPermiso"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://registrarPermiso.businessl.webservices.sirh.ideam.gov.co/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../../SincronizarSIAC.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST"/>
+      <url n="PROXY_WSDL_URL" path="WS_SIAC_SIRH_RegistrarPermiso.wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://registrarPermiso.businessl.webservices.sirh.ideam.gov.co/}WS_SIAC_SIRH_RegistrarPermiso"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://registrarPermiso.businessl.webservices.sirh.ideam.gov.co/}WS_SIAC_SIRH_RegistrarPermisoSoapBinding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BOUND_OPERATION" v="co.gov.ideam.sirh.webservices.businessl.registrarpermiso.OsRegistrarPermiso.registrarPermiso.co.gov.ideam.sirh.webservices.businessl.registrarpermiso.OeRegistrarPermiso"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="00953655-0159-1000-8001-a9fec1ad8fae"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="RegistrarPermisoSirhPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://registrarPermiso.businessl.webservices.sirh.ideam.gov.co/}WS_SIAC_SIRH_RegistrarPermisoSoapBinding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="co.gov.ideam.sirh.webservices.businessl.registrarpermiso.OsRegistrarPermiso.registrarPermiso.co.gov.ideam.sirh.webservices.businessl.registrarpermiso.OeRegistrarPermiso"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="129.144.8.81" port="80" path="/WS_SIRH_RegistrarPermiso/proxy/RegistrarPermisoProxy"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://registrarPermiso.businessl.webservices.sirh.ideam.gov.co/}WS_SIAC_SIRH_RegistrarPermiso"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="co.gov.ideam.sirh.webservices.businessl.registrarpermiso.WS_SIAC_SIRH_RegistrarPermisoImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="co.gov.ideam.sirh.webservices.businessl.registrarpermiso.WS_SIAC_SIRH_RegistrarPermiso"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../../../SincronizarSIAC.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://registrarPermiso.businessl.webservices.sirh.ideam.gov.co/"/>
+         <value n="WS_URI" v="WS_SIAC_SIRH_RegistrarPermiso"/>
+         <url n="WS_WSDL_FILE" path="WS_SIAC_SIRH_RegistrarPermiso.wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+   </hash>
+</jdevws:WebServiceProxy>

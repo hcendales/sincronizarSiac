@@ -1,0 +1,16 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://129.144.6.77:8001/WS_SIRH_RegistrarPermiso/proxy/RegistrarPermisoProxy?wsdl"
+          uri="../co/gov/ideam/sirh/webservices/businessl/registrarpermiso/WS_SIAC_SIRH_RegistrarPermiso.wsdl"/>
+  <system systemId="http://129.144.6.77:8001/WS_RUA_RegistrarPermiso/proxy/RegistrarPermisoProxy?wsdl"
+          uri="../co/gov/ideam/rua/electrico/webservices/WS_IDEAM_RUA_RegistrarPermiso.wsdl"/>
+  <system systemId="http://129.144.6.77:8001/WS_SIRH_ConsultarFuncionarios/proxy/ConsultarFuncionariosProxy?wsdl"
+          uri="../co/gov/ideam/sirh/webservices/businessl/consultarfuncionarios/WS_SIAC_SIRH_ConsultarFuncionarios.wsdl"/>
+  <system systemId="http://181.225.72.78:8080/SNIF-SIAC-WS-web/WS_IDEAM_SNIF_ConsultarFuncionarios?WSDL"
+          uri="../co/gov/ideam/integracion/snif/webservices/funcionarios/WS_IDEAM_SNIF_ConsultarFuncionarios.wsdl"/>
+  <system systemId="http://181.225.72.108:9130/RUA/faces/WS_IDEAM_RUA_ConsultarFuncionarios?wsdl"
+          uri="../co/gov/ideam/rua/electrico/webservices/WS_IDEAM_RUA_ConsultarFuncionarios.wsdl"/>
+  <system systemId="http://181.225.72.35:8230/Ideam-Ejb/WS_SIAC_SIRH_ConsultarPermisos/WS_SIAC_SIRH_ConsultarPermisos?WSDL"
+          uri="../co/gov/ideam/sirh/webservices/businessl/consultarpermisos/WS_SIAC_SIRH_ConsultarPermisos.wsdl"/>
+  <system systemId="http://181.225.72.78:8080/snif-integra-ws-web/WS_IDEAM_SNIF_ConsultarPermisos?WSDL"
+          uri="../co/gov/ideam/snif/integracion/webservices/consultarpermisos/WS_IDEAM_SNIF_ConsultarPermisos.wsdl"/>
+</catalog>

@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns2="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname localpart="WS_SIAC_SIRH_RegistrarPermiso"
+                     namespaceURI="http://registrarPermiso.businessl.webservices.sirh.ideam.gov.co/"/>
+      <port-info>
+         <wsdl-port localpart="RegistrarPermisoSirhPort"
+                    namespaceURI="http://registrarPermiso.businessl.webservices.sirh.ideam.gov.co/"/>
+         <runtime/>
+         <operations>
+            <operation name="registrarPermiso"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

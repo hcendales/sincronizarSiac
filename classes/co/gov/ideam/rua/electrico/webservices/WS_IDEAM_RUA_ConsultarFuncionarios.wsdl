@@ -1,0 +1,80 @@
+<wsdl:definitions
+     name="WS_IDEAM_RUA_ConsultarFuncionarios"
+     targetNamespace="http://webservices.electrico.rua.ideam.gov.co/"
+     xmlns:ns1="http://schemas.xmlsoap.org/soap/http"
+     xmlns:tns="http://webservices.electrico.rua.ideam.gov.co/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    >
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.electrico.rua.ideam.gov.co/"
+             elementFormDefault="unqualified" targetNamespace="http://webservices.electrico.rua.ideam.gov.co/"
+             version="1.0">
+            <xs:element name="funcionarios" type="tns:funcionarios"/>
+            <xs:element name="funcionariosResponse" type="tns:funcionariosResponse"/>
+            <xs:element name="vwRuaFuncionarios" type="tns:vwRuaFuncionarios"/>
+            <xs:complexType name="funcionarios">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="objetoEntrada" type="tns:oeFuncionarios"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="oeFuncionarios">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="codAutoridadAmbiental" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="funcionariosResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="tns:osFuncionarios"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="osFuncionarios">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="codigoError" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="listFuncionarios" nillable="true"
+                         type="tns:vwRuaFuncionarios"/>
+                    <xs:element minOccurs="0" name="mensajeError" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="vwRuaFuncionarios">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="aliasusuario" type="xs:string"/>
+                    <xs:element name="codigotipoidentificacion" type="xs:long"/>
+                    <xs:element minOccurs="0" name="direccioncorreoelectronico" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identificacionpersona" type="xs:string"/>
+                    <xs:element minOccurs="0" name="nombrefuncionario" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="funcionarios">
+        <wsdl:part name="parameters" element="tns:funcionarios"/>
+    </wsdl:message>
+    <wsdl:message name="funcionariosResponse">
+        <wsdl:part name="parameters" element="tns:funcionariosResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="WS_IDEAM_RUA_ConsultarFuncionarios">
+        <wsdl:operation name="funcionarios">
+            <wsdl:input name="funcionarios" message="tns:funcionarios"/>
+            <wsdl:output name="funcionariosResponse" message="tns:funcionariosResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="WS_IDEAM_RUA_ConsultarFuncionariosSoapBinding" type="tns:WS_IDEAM_RUA_ConsultarFuncionarios">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="funcionarios">
+            <soap:operation style="document" soapAction=""/>
+            <wsdl:input name="funcionarios">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="funcionariosResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="WS_IDEAM_RUA_ConsultarFuncionarios">
+        <wsdl:port name="WS_IDEAM_RUA_ConsultarFuncionariosPort" binding="tns:WS_IDEAM_RUA_ConsultarFuncionariosSoapBinding">
+            <soap:address location="http://172.16.1.40:9130/RUA/WS_IDEAM_RUA_ConsultarFuncionarios"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

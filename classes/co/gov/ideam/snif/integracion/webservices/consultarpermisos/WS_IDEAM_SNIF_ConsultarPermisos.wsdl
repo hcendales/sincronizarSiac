@@ -1,0 +1,97 @@
+<wsdl:definitions
+     name="WS_IDEAM_SNIF_ConsultarPermisos"
+     targetNamespace="http://consultarPermisos.webservices.integracion.snif.ideam.gov.co/"
+     xmlns:ns1="http://schemas.xmlsoap.org/soap/http"
+     xmlns:tns="http://consultarPermisos.webservices.integracion.snif.ideam.gov.co/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    >
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://consultarPermisos.webservices.integracion.snif.ideam.gov.co/"
+             elementFormDefault="unqualified" targetNamespace="http://consultarPermisos.webservices.integracion.snif.ideam.gov.co/"
+             version="1.0">
+            <xs:element name="consultarPermisos" type="tns:consultarPermisos"/>
+            <xs:element name="consultarPermisosResponse" type="tns:consultarPermisosResponse"/>
+            <xs:complexType name="consultarPermisos">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="objetoEntrada" type="tns:oeConsultarPermisos"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="oeConsultarPermisos">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="codAutoridadAmbiental" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fechaFin" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fechaInicio" type="xs:string"/>
+                    <xs:element minOccurs="0" name="filtroConsulta" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="consultarPermisosResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="tns:osConsultarPermisos"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="osConsultarPermisos">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="codigoError" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="listaConsultaPermisos" nillable="true"
+                         type="tns:consultaPermisos"/>
+                    <xs:element minOccurs="0" name="mensajeError" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="consultaPermisos">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="apellidoUsuario" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cedulaCatastral" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codAutoridadAmbiental" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codDeptoPredio" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codMunicipioPredio" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codigo" type="xs:long"/>
+                    <xs:element minOccurs="0" name="codigoTipoIdentificacion" type="xs:string"/>
+                    <xs:element minOccurs="0" name="direccionPredio" type="xs:string"/>
+                    <xs:element minOccurs="0" name="estado" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fechaExpedicion" type="xs:string"/>
+                    <xs:element minOccurs="0" name="fechaVencimiento" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identificacionPersona" type="xs:string"/>
+                    <xs:element minOccurs="0" name="infoTecnica" type="xs:string"/>
+                    <xs:element minOccurs="0" name="matriculaInmobiliaria" type="xs:string"/>
+                    <xs:element minOccurs="0" name="nombrePredio" type="xs:string"/>
+                    <xs:element minOccurs="0" name="nombreUsuario" type="xs:string"/>
+                    <xs:element minOccurs="0" name="numExpediente" type="xs:string"/>
+                    <xs:element minOccurs="0" name="numResolucion" type="xs:string"/>
+                    <xs:element minOccurs="0" name="tipoPermiso" type="xs:string"/>
+                    <xs:element minOccurs="0" name="tipoPersona" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="consultarPermisos">
+        <wsdl:part name="parameters" element="tns:consultarPermisos"/>
+    </wsdl:message>
+    <wsdl:message name="consultarPermisosResponse">
+        <wsdl:part name="parameters" element="tns:consultarPermisosResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="WSConsultarPermisos">
+        <wsdl:operation name="consultarPermisos">
+            <wsdl:input name="consultarPermisos" message="tns:consultarPermisos"/>
+            <wsdl:output name="consultarPermisosResponse" message="tns:consultarPermisosResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="WS_IDEAM_SNIF_ConsultarPermisosSoapBinding" type="tns:WSConsultarPermisos">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="consultarPermisos">
+            <soap:operation style="document" soapAction=""/>
+            <wsdl:input name="consultarPermisos">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="consultarPermisosResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="WS_IDEAM_SNIF_ConsultarPermisos">
+        <wsdl:port name="WSConsultarPermisosPort" binding="tns:WS_IDEAM_SNIF_ConsultarPermisosSoapBinding">
+            <soap:address location="http://172.16.1.30:8080/snif-integra-ws-web/WS_IDEAM_SNIF_ConsultarPermisos"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
